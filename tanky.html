@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanky v Druhej svetovej vojne</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tank-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .tank-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .tank-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .tank-details {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .show-details {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .ww2-tanks-intro {
+            padding: 20px;
+            margin: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .intro-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-content h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .intro-content ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .intro-content li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .intro-content li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        .intro-content p {
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tanky v Druhej svetovej vojne</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Domov</a>
+            <a href="lietadla.html">Lietadlá</a>
+            <a href="tanky.html">Tanky</a>
+            <a href="lode.html">Lode</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="ww2-tanks-intro">
+            <h2>Tankové technológie druhej svetovej vojny</h2>
+            <div class="intro-content">
+                <p>Druhá svetová vojna priniesla revolučný vývoj v oblasti tankových technológií. Tanky sa stali kľúčovou súčasťou pozemných operácií a symbolom mechanizovanej vojny:</p>
+                
+                <h3>Kľúčové technologické inovácie:</h3>
+                <ul>
+                    <li><strong>Pancierovanie:</strong> Vývoj sklonených pancierových plátov a nových typov ocele.</li>
+                    <li><strong>Kanóny:</strong> Zvýšenie kalibru a prieraznosti protitankových zbraní.</li>
+                    <li><strong>Pohonné jednotky:</strong> Výkonnejšie motory a vylepšené prevodovky.</li>
+                    <li><strong>Pásové podvozky:</strong> Zdokonalenie mobility v rôznych terénoch.</li>
+                </ul>
+
+                <h3>Významné pokroky:</h3>
+                <ul>
+                    <li><strong>Optika:</strong> Vylepšené zameriavacie systémy a periskopy.</li>
+                    <li><strong>Komunikácia:</strong> Zavedenie rádiového spojenia medzi tankami.</li>
+                    <li><strong>Ergonómia:</strong> Zlepšenie vnútorného usporiadania a obsluhy.</li>
+                    <li><strong>Výroba:</strong> Zavedenie masovej produkcie a štandardizácie.</li>
+                </ul>
+
+                <p>Tieto technologické pokroky formovali nielen priebeh druhej svetovej vojny, ale aj budúci vývoj tankových technológií a pozemnej vojnovej techniky.</p>
+            </div>
+        </section>
+
+        <section class="tank-types">
+            <div class="tank-category">
+                <h2>Hlavné tanky vojny</h2>
+                <div class="tank-grid">
+                    <div class="tank-card">
+                        <img src="tiger.jpg" alt="Tiger I" class="tank-image">
+                        <h3>Tiger I</h3>
+                        <p>Legendárny nemecký ťažký tank</p>
+                        <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                        <div class="tank-details">
+                            <h4>Technické údaje:</h4>
+                            <ul>
+                                <li>Hmotnosť: 54 ton</li>
+                                <li>Hlavná výzbroj: 88 mm KwK 36 L/56</li>
+                                <li>Pancierovanie: až 120 mm</li>
+                                <li>Maximálna rýchlosť: 38 km/h</li>
+                            </ul>
+                            <p>Tiger I bol jeden z najobávanejších tankov vojny, známy svojou silnou výzbrojou a hrubým pancierovaním.</p>
+                        </div>
+                    </div>
+
+                    <div class="tank-card">
+                        <img src="t34.jpg" alt="T-34" class="tank-image">
+                        <h3>T-34</h3>
+                        <p>Sovietsky stredný tank</p>
+                        <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                        <div class="tank-details">
+                            <h4>Technické údaje:</h4>
+                            <ul>
+                                <li>Hmotnosť: 26,5 ton</li>
+                                <li>Hlavná výzbroj: 76,2 mm F-34</li>
+                                <li>Pancierovanie: 45-60 mm</li>
+                                <li>Maximálna rýchlosť: 53 km/h</li>
+                            </ul>
+                            <p>T-34 bol považovaný za najlepší tank svojej doby, kombinujúci mobilitu, pancierovanie a palebnú silu.</p>
+                        </div>
+                    </div>
+
+                    <div class="tank-card">
+                        <img src="sherman.jpg" alt="M4 Sherman" class="tank-image">
+                        <h3>M4 Sherman</h3>
+                        <p>Americký stredný tank</p>
+                        <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                        <div class="tank-details">
+                            <h4>Technické údaje:</h4>
+                            <ul>
+                                <li>Hmotnosť: 30,3 ton</li>
+                                <li>Hlavná výzbroj: 75 mm M3 L/40</li>
+                                <li>Pancierovanie: 12-76 mm</li>
+                                <li>Maximálna rýchlosť: 42 km/h</li>
+                            </ul>
+                            <p>M4 Sherman bol najrozšírenejší tank spojeneckých síl počas druhej svetovej vojny, známy svojou spoľahlivosťou a ľahkou údržbou.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="tank-types">
+        <div class="tank-category">
+            <h2>Konceptuálne tanky</h2>
+            <div class="tank-grid">
+                <div class="tank-card">
+                    <img src="panzer8.jpg" alt="Panzer VIII Maus" class="tank-image">
+                    <h3>Panzer VIII Maus</h3>
+                    <p>Nemecký super-ťažký tank</p>
+                    <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                    <div class="tank-details">
+                        <h4>Technické údaje:</h4>
+                        <ul>
+                            <li>Hmotnosť: 188 ton</li>
+                            <li>Hlavná výzbroj: 128 mm KwK 44 L/55</li>
+                            <li>Pancierovanie: až 220 mm</li>
+                            <li>Maximálna rýchlosť: 20 km/h</li>
+                        </ul>
+                        <p>Najťažší tank, ktorý bol kedy postavený. Dokončené boli len dva prototypy.</p>
+                    </div>
+                </div>
+
+                <div class="tank-card">
+                    <img src="tortoise.jpg" alt="A39 Tortoise" class="tank-image">
+                    <h3>A39 Tortoise</h3>
+                    <p>Britský ťažký útočný tank</p>
+                    <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                    <div class="tank-details">
+                        <h4>Technické údaje:</h4>
+                        <ul>
+                            <li>Hmotnosť: 78 ton</li>
+                            <li>Hlavná výzbroj: 32-pounder (94 mm)</li>
+                            <li>Pancierovanie: až 228 mm</li>
+                            <li>Maximálna rýchlosť: 19 km/h</li>
+                        </ul>
+                        <p>Experimentálny britský tank určený na prekonávanie opevnených línií.</p>
+                    </div>
+                </div>
+
+                <div class="tank-card">
+                    <img src="t28.jpg" alt="T28 Super Heavy Tank" class="tank-image">
+                    <h3>T28 Super Heavy Tank</h3>
+                    <p>Americký super-ťažký tank</p>
+                    <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                    <div class="tank-details">
+                        <h4>Technické údaje:</h4>
+                        <ul>
+                            <li>Hmotnosť: 95 ton</li>
+                            <li>Hlavná výzbroj: 105 mm T5E1</li>
+                            <li>Pancierovanie: až 305 mm</li>
+                            <li>Maximálna rýchlosť: 13 km/h</li>
+                        </ul>
+                        <p>Navrhnutý pre prekonávanie nemeckej Siegfriedovej línie, nikdy nebol nasadený v boji.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    function toggleDetails(button) {
+        var details = button.nextElementSibling;
+        if (details.style.display === "none" || details.style.display === "") {
+            details.style.display = "block";
+            button.textContent = "Skryť detaily";
+        } else {
+            details.style.display = "none";
+            button.textContent = "Zobraziť viac";
+        }
+    }
+</script>
+</body>
+</html>

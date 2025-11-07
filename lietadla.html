@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lietadlá v Druhej svetovej vojne</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .aircraft-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .aircraft-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .aircraft-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .aircraft-details {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .show-details {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .ww2-aviation-intro {
+            padding: 20px;
+            margin: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .intro-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-content h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .intro-content ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .intro-content li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .intro-content li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        .intro-content p {
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lietadlá v Druhej svetovej vojne</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Domov</a>
+            <a href="lietadla.html">Lietadlá</a>
+            <a href="tanky.html">Tanky</a>
+            <a href="lode.html">Lode</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="ww2-aviation-intro">
+            <h2>Letecké technológie druhej svetovej vojny</h2>
+            <div class="intro-content">
+                <p>Druhá svetová vojna priniesla revolučný vývoj v leteckých technológiách. Počas šiestich rokov konfliktu došlo k dramatickému pokroku v oblasti leteckého inžinierstva a bojových schopností lietadiel:</p>
+                
+                <h3>Kľúčové technologické inovácie:</h3>
+                <ul>
+                    <li><strong>Prúdové motory:</strong> Nemecko vyvinulo prvé operačné prúdové stíhačky Me 262, čo znamenalo začiatok novej éry v letectve.</li>
+                    <li><strong>Radar:</strong> Zavedenie radarových systémov dramaticky zmenilo spôsob vedenia vzdušného boja a obrany.</li>
+                    <li><strong>Presné bombardovanie:</strong> Vývoj pokročilých zameriavacích zariadení významne zvýšil presnosť bombardovania.</li>
+                    <li><strong>Aerodynamika:</strong> Výskum v oblasti aerodynamiky viedol k efektívnejším dizajnom lietadiel a vyšším rýchlostiam.</li>
+                </ul>
+
+                <h3>Významné pokroky:</h3>
+                <ul>
+                    <li><strong>Materiály:</strong> Použitie ľahkých zliatin a nových konštrukčných materiálov.</li>
+                    <li><strong>Výzbroj:</strong> Vývoj synchronizovaných guľometov a kanónov montovaných v krídlach.</li>
+                    <li><strong>Navigácia:</strong> Zavedenie rádiových navigačných systémov pre lety za každého počasia.</li>
+                    <li><strong>Kabínové systémy:</strong> Vylepšené pretlakové kabíny umožňujúce lety vo väčších výškach.</li>
+                </ul>
+
+                <p>Tieto technologické pokroky nielen ovplyvnili priebeh druhej svetovej vojny, ale položili aj základy moderného letectva. Mnoho z týchto inovácií sa neskôr využilo v civilnom letectve a ďalšom vojenskom vývoji.</p>
+            </div>
+        </section>
+
+        <section class="aircraft-types">
+            <div class="aircraft-category">
+                <h2>Stíhačky</h2>
+                <div class="aircraft-grid">
+                    <div class="aircraft-card">
+                        <img src="spitfire.jpg" alt="Spitfire" class="aircraft-image">
+                        <h3>Supermarine Spitfire</h3>
+                        <p>Ikonická britská stíhačka, kľúčová v Bitke o Britániu</p>
+                        <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                        <div class="aircraft-details">
+                            <h4>Technické údaje:</h4>
+                            <ul>
+                                <li>Dĺžka: 9,12 m</li>
+                                <li>Rozpätie krídel: 11,23 m</li>
+                                <li>Maximálna rýchlosť: 595 km/h</li>
+                                <li>Výzbroj: 8 × 7,7 mm guľomety Browning</li>
+                            </ul>
+                            <p>Spitfire bol známy svojou manévrovateľnosťou a hrál kľúčovú úlohu v obrane Británie počas leteckej bitky v roku 1940.</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <img src="bf109.jpg" alt="Messerschmitt Bf 109" class="aircraft-image">
+                        <h3>Messerschmitt Bf 109</h3>
+                        <p>Hlavná nemecká stíhačka prvých rokov vojny</p>
+                        <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                        <div class="aircraft-details">
+                            <h4>Technické údaje:</h4>
+                            <ul>
+                                <li>Dĺžka: 8,95 m</li>
+                                <li>Rozpätie krídel: 9,92 m</li>
+                                <li>Maximálna rýchlosť: 640 km/h</li>
+                                <li>Výzbroj: 2 × 7,92 mm guľomety MG 17, 1 × 20 mm kanón MG 151/20</li>
+                            </ul>
+                            <p>Bf 109 bol najvýznamnejší nemecký stíhač počas celej vojny, známy svojou vysokou rýchlosťou a obratnosťou vo výškach.</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <img src="mustang.jpg" alt="P-51 Mustang" class="aircraft-image">
+                        <h3>P-51 Mustang</h3>
+                        <p>Americký stíhací letún s dlhým doletom</p>
+                        <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                        <div class="aircraft-details">
+                            <h4>Technické údaje:</h4>
+                            <ul>
+                                <li>Dĺžka: 9,83 m</li>
+                                <li>Rozpätie krídel: 11,28 m</li>
+                                <li>Maximálna rýchlosť: 703 km/h</li>
+                                <li>Výzbroj: 6 × 12,7 mm guľomety M2 Browning</li>
+                            </ul>
+                            <p>P-51 Mustang bol kľúčovým stíhacím lietadlom, ktoré poskytovalo sprievod bombardérom na dlhé vzdialenosti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aircraft-category">
+                <h2>Bombardéry</h2>
+                <div class="aircraft-grid">
+                    <div class="aircraft-card">
+                        <img src="b17.jpg" alt="B-17 Flying Fortress" class="aircraft-image">
+                        <h3>B-17 Flying Fortress</h3>
+                        <p>Americký ťažký bombardér</p>
+                        <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                        <div class="aircraft-details">
+                            <h4>Technické údaje:</h4>
+                            <ul>
+                                <li>Dĺžka: 22,66 m</li>
+                                <li>Rozpätie krídel: 31,62 m</li>
+                                <li>Maximálna rýchlosť: 462 km/h</li>
+                                <li>Bomby: až 7800 kg</li>
+                            </ul>
+                            <p>B-17 bol známy svojou odolnosťou a schopnosťou prežiť ťažké poškodenie.</p>
+                        </div>
+                    </div>
+
+                    <div class="aircraft-card">
+                        <img src="he111.jpg" alt="Heinkel He 111" class="aircraft-image">
+                        <h3>Heinkel He 111</h3>
+                        <p>Nemecký stredný bombardér</p>
+                        <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                        <div class="aircraft-details">
+                            <h4>Technické údaje:</h4>
+                            <ul>
+                                <li>Dĺžka: 16,4 m</li>
+                                <li>Rozpätie krídel: 22,6 m</li>
+                                <li>Maximálna rýchlosť: 410 km/h</li>
+                                <li>Bomby: až 2000 kg</li>
+                            </ul>
+                            <p>He 111 bol hlavným bombardérom Luftwaffe počas prvých rokov vojny, známy svojím charakteristickým preskleným nosom.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleDetails(button) {
+            var details = button.nextElementSibling;
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+                button.textContent = "Skryť detaily";
+            } else {
+                details.style.display = "none";
+                button.textContent = "Zobraziť viac";
+            }
+        }
+    </script>
+</body>
+</html>

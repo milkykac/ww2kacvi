@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lode v Druhej svetovej vojne</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .ship-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .ship-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .ship-details {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .show-details {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .ww2-ships-intro {
+            padding: 20px;
+            margin: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lode v Druhej svetovej vojne</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Domov</a>
+            <a href="lietadla.html">Lietadlá</a>
+            <a href="tanky.html">Tanky</a>
+            <a href="lode.html">Lode</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="ww2-ships-intro">
+            <h2>Námorné sily v druhej svetovej vojne</h2>
+            <div class="intro-content">
+                <p>Druhá svetová vojna priniesla revolúciu v námornom vojenstve. Lode všetkých typov zohrávali kľúčovú úlohu v konflikte, od masívnych bojových lodí po nenápadné ponorky:</p>
+
+                <h3>Hlavné kategórie vojnových lodí:</h3>
+                <ul>
+                    <li><strong>Bojové lode:</strong> Hlavná útočná sila námorníctva</li>
+                    <li><strong>Lietadlové lode:</strong> Nová éra námorného boja</li>
+                    <li><strong>Krížniky:</strong> Univerzálne bojové plavidlá</li>
+                    <li><strong>Torpédoborce:</strong> Rýchle a všestranné lode</li>
+                    <li><strong>Ponorky:</strong> Tiché ale smrteľné zbrane</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="ship-types">
+            <h2>Významné lode vojny</h2>
+            <div class="ship-grid">
+                <div class="ship-card">
+                    <img src="bismarck.jpg" alt="Bismarck" class="ship-image">
+                    <h3>Bismarck</h3>
+                    <p>Nemecká bojová loď</p>
+                    <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                    <div class="ship-details">
+                        <h4>Technické údaje:</h4>
+                        <ul>
+                            <li>Dĺžka: 251 m</li>
+                            <li>Výtlak: 41,700 ton</li>
+                            <li>Hlavná výzbroj: 8 × 380 mm delá</li>
+                            <li>Maximálna rýchlosť: 30 uzlov</li>
+                        </ul>
+                        <p>Najslávnejšia nemecká bojová loď, potopená v máji 1941 po dramatickom prenasledovaní.</p>
+                    </div>
+                </div>
+
+                <div class="ship-card">
+                    <img src="yamato.jpg" alt="Yamato" class="ship-image">
+                    <h3>Yamato</h3>
+                    <p>Japonská bojová loď</p>
+                    <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                    <div class="ship-details">
+                        <h4>Technické údaje:</h4>
+                        <ul>
+                            <li>Dĺžka: 263 m</li>
+                            <li>Výtlak: 65,000 ton</li>
+                            <li>Hlavná výzbroj: 9 × 460 mm delá</li>
+                            <li>Maximálna rýchlosť: 27 uzlov</li>
+                        </ul>
+                        <p>Najväčšia bojová loď všetkých čias, symbol japonskej námornej moci.</p>
+                    </div>
+                </div>
+
+                <div class="ship-card">
+                    <img src="essex.jpg" alt="USS Essex" class="ship-image">
+                    <h3>USS Essex</h3>
+                    <p>Americká lietadlová loď</p>
+                    <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                    <div class="ship-details">
+                        <h4>Technické údaje:</h4>
+                        <ul>
+                            <li>Dĺžka: 265 m</li>
+                            <li>Výtlak: 27,100 ton</li>
+                            <li>Kapacita lietadiel: 90-100</li>
+                            <li>Maximálna rýchlosť: 33 uzlov</li>
+                        </ul>
+                        <p>Jedna z najúspešnejších tried lietadlových lodí v histórii.</p>
+                    </div>
+                </div>
+
+                <div class="ship-card">
+                    <img src="hmshood.jpg" alt="HMS Hood" class="ship-image">
+                    <h3>HMS Hood</h3>
+                    <p>Britský bojový krížnik</p>
+                    <button class="show-details" onclick="toggleDetails(this)">Zobraziť viac</button>
+                    <div class="ship-details">
+                        <h4>Technické údaje:</h4>
+                        <ul>
+                            <li>Dĺžka: 262 m</li>
+                            <li>Výtlak: 42,100 ton</li>
+                            <li>Hlavná výzbroj: 8 × 381 mm delá</li>
+                            <li>Maximálna rýchlosť: 32 uzlov</li>
+                        </ul>
+                        <p>Pýcha britského kráľovského námorníctva, potopená v boji s Bismarckom v roku 1941.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleDetails(button) {
+            var details = button.nextElementSibling;
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+                button.textContent = "Skryť detaily";
+            } else {
+                details.style.display = "none";
+                button.textContent = "Zobraziť viac";
+            }
+        }
+    </script>
+</body>
+</html>
